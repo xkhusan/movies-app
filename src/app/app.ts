@@ -4,10 +4,11 @@ import { TestComponent } from "./components/test/test.component";
 import { Details } from "./components/details/details";
 import { CurrencyPipe, DatePipe, LowerCasePipe, UpperCasePipe } from '@angular/common';
 import { ProfitPipe } from './pipes/profit.pipe';
+import { FormsModule } from '@angular/forms';
 
 @Component({
 	selector: 'app-root',
-	imports: [TestComponent, Details, UpperCasePipe, LowerCasePipe, DatePipe, CurrencyPipe, ProfitPipe],
+	imports: [TestComponent, Details, UpperCasePipe, LowerCasePipe, DatePipe, CurrencyPipe, ProfitPipe, FormsModule],
 	templateUrl: './app.html',
 	styleUrls: ['./app.css']
 })
@@ -24,4 +25,15 @@ export class App {
 	multipleClasses = 'sample-bg-color sample-color';
 	multipleStyles = 'background-color: magenta; color: black;';
 	bgColor = 'orchid';
+	timeNow = new Date();
+	setTimeToNow() {
+		console.log(new Date());
+		this.timeNow = new Date();
+	}
+	_color = '';
+	setTextColor(color: string) {
+		console.log(color);
+		this._color = color;
+	}
+	fullName = 'Khusan Rashidov';
 }

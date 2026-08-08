@@ -4,6 +4,21 @@
 
 <img [src]="imageUrl" [width]="imageWidth"/>
 
+<br>
+
+<button (click)="setTimeToNow()">set time to now</button>
+
+<br>
+
+<input #color placeholder="type your color">
+<button (click)="setTextColor(color.value)">set color</button>
+<p [style.color]="_color">The color will be the entered input.</p>
+
+<input [(ngModel)]="fullName">
+<p>{{ fullName }}</p>
+
+<p>Time now: {{ timeNow }}</p>
+
 <p>
     Image URL: {{ imageUrl | lowercase }}
     <br>

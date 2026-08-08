@@ -11,4 +11,7 @@ import { Details } from "./components/details/details";
 })
 export class App {
   protected readonly title = signal('movies-app');
+  text = 'Text in the App Component.';
+  today = new Date();
+  imageUrl = 'https://dotnethow.net/images/movies/movie-1.jpeg'
 }

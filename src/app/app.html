@@ -1,7 +1,22 @@
 <h1>Welcome to app component.</h1>
-<h3>Text: {{text}}</h3>
-<h4>Today: {{today}}</h4>
-<p>Image URL: {{imageUrl}}</p>
+<h3>Text: {{ text | uppercase }}</h3>
+<h4>Today: {{ today | date: 'dd.MM.yyyy' }}</h4>
+
+<img [src]="imageUrl" [width]="imageWidth"/>
+
+<p>
+    Image URL: {{ imageUrl | lowercase }}
+    <br>
+    Currency: {{ price | currency }}
+</p>
+
+<span>
+    Selling price: {{ sellingPrice | currency }}, profit: {{ sellingPrice | profit: 8 | currency }}
+</span>
+
+<hr>
+
+<button type="button" [attr.aria-label]="attributeValue">Sample button.</button>
 
 <hr>
 <app-details></app-details>

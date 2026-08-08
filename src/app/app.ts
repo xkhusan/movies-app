@@ -19,5 +19,9 @@ export class App {
 	price = 10;
 	sellingPrice = 82.10;
 	imageWidth = 128;
-	attributeValue = "movies-app-test-value";
+	attributeValue = 'movies-app-test-value';
+	isSampleApplied = true;
+	multipleClasses = 'sample-bg-color sample-color';
+	multipleStyles = 'background-color: magenta; color: black;';
+	bgColor = 'orchid';
 }

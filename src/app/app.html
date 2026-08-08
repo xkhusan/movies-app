@@ -10,6 +10,22 @@
     Currency: {{ price | currency }}
 </p>
 
+<p [class.sample]="isSampleApplied">
+    This is a sample paragraph to test the class and style binding.
+</p>
+
+<p [class]="multipleClasses">
+    This is a sample paragraph to test the class and style binding.
+</p>
+
+<p [style]="multipleStyles">
+    This is a sample paragraph to test the class and style binding.
+</p>
+
+<p [style.backgroundColor]="bgColor">
+    This is a sample paragraph to test the class and style binding.
+</p>
+
 <span>
     Selling price: {{ sellingPrice | currency }}, profit: {{ sellingPrice | profit: 8 | currency }}
 </span>
